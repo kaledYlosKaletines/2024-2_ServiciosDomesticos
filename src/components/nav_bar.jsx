@@ -17,10 +17,19 @@ export const NavBar = () => {
       </NavLink>
       <NavLink
         className={navLinkClass}
-        to='/lightbulb'
+        to='/ofrecer'
       >
-        Ampolleta
+        Ofrecer
       </NavLink>
+      <NavLink
+      className={navLinkClass}
+      to='/solicitar'>
+
+      Solicitar
+
+      </NavLink>
+    
+    
     </nav>
   )
 }
