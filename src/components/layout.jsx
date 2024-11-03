@@ -5,9 +5,7 @@ import HomePage from '../pages/home_page'
 import SolicitarPage from '../pages/SolicitarPage'
 import OfrecerPage from '../pages/OfrecerPage'
 
-import NavBar from '../components/nav_bar'
 import Barra_horizontal from '../components/barra_horizontal'
-
 
 
 const Layout = () => {
