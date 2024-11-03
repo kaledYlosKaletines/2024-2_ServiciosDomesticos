@@ -2,54 +2,54 @@ import React from 'react'
 
 export const OfrecerPage = () => {
 
-    return(
+  return(
 
-    <>
-      <p>Aca podras ofrecer tus servicios domesticos</p>
+  <>
+    <p className = 'titulos' > Aca podras ofrecer tus servicios domesticos</p>
+    
+    <div className='Formulario'>
+
+    <form>
+      <label>Nombre: <input type="text" name="name" /> </label>
       
-      <div className='Formulario'>
+      <label>
+      <hr />
 
-      <form>
-        <label>Nombre: <input type="text" name="name" /> </label>
+      Seleccione tipo de servicio:
+
+      <select>
+        <option value='domestico'>Servicios domesticos</option>  
+        <option value='jardineria'>Jardineria</option>
+        <option value='otros'>Otros</option>    
         
-        <label>
-        <hr />
+      </select>    
+      <hr />
 
-        Seleccione tipo de servicio:
-
-        <select>
-          <option value='domestico'>Servicios domesticos</option>  
-          <option value='jardineria'>Jardineria</option>
-          <option value='otros'>Otros</option>    
-          
-        </select>    
-        <hr />
-
-        </label>
-        
-        <label>Descripcion: 
-
-        <textarea name="descripcion" rows={4} cols={40} />
-        </label>
-
-
-      </form>
-
+      </label>
       
-      <button className='Siguiente'> Siguiente </button>
+      <label>Descripcion: 
+
+      <textarea name="descripcion" rows={4} cols={40} />
+      </label>
 
 
-      </div>
+    </form>
 
     
-      
-    </>
+    <button className='Siguiente'> Siguiente </button>
 
-      
 
-    ) 
+    </div>
+
+  
+    
+  </>
 
     
+
+  ) 
+
+  
 
 
 }
