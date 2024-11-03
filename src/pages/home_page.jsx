@@ -17,11 +17,11 @@ export const HomePage = () => {
       <div className='center-block'>
 
         <div>
-          <Button text="Ofrecer Servicios" to="/ofrecer" type="primary" />
+          <Button text="Ofrecer Servicios" to="/ofrecer" type="asblockPrimary" />
         </div>
 
-        <div>
-          <Button text="Buscar Servicios" to="/solicitar" type="primary" />
+        <div >
+          <Button text="Buscar Servicios" to="/solicitar" type="asblockPrimary" />
         </div>
 
       </div>

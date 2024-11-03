@@ -44,27 +44,6 @@
     border-radius: 4px;
   }
   
-  /* Button styling */
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .Siguiente, .Atras {
-    background-color: #47ee05;
-    color: black ;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .Siguiente:hover, .Atras:hover {
-    background-color: #3cb004;
-  }
 
   .titulos {
     display: block;
@@ -72,6 +51,5 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center; /* Opcional, si también quieres centrar el texto */
-    width: 50%; /* Ajusta el ancho según tus necesidades */
 }
   

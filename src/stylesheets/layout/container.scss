@@ -1,0 +1,28 @@
+.container {
+    display: grid; /* Activar Grid */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    gap: 20px; /* Gap por defecto (gap ancho) */
+    margin: 10px;
+    align-items: center;
+  }
+  
+  .left {
+    /* background-color: #4CAF50; Color de fondo del contenedor izquierdo */
+    display: flex; /* Para centrar contenido */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right {
+    /* background-color: #2196F3; Color de fondo del contenedor derecho */
+    display: flex; /* Para centrar contenido */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .container.button-gap {
+    margin-top: 30px;
+    gap: 140px; /* Gap no tan ancho */
+  }
+  
