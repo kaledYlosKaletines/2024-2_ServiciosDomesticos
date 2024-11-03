@@ -1,0 +1,26 @@
+.barra_horizontal {
+  width: 100%;
+  background-color: #4CAF50; /* Color verde */
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.barra_horizontal-top {
+  padding: 10px;
+  text-align: center;
+  margin-left: 15px;
+}
+
+.barra_horizontal-menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.barra_horizontal-menu li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 16px;
+}

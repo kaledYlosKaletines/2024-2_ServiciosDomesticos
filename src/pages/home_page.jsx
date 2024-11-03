@@ -1,16 +1,34 @@
 import React from 'react'
+import Button from '../components/button'
 
 export const HomePage = () => {
   return (
     <>
-      <p>Bienvenido a Servicios domesticos</p>
-      <p>En esta página podras solicitar u ofrecer todo tipo de servicios domesticos en tu comunidad!</p>
 
-      <p>¿Que deseas hacer?</p>
+      <div className='center-block'> 
 
-      <button className='ofrecer'> OFRECER SERVICIOS </button>
-      <button className='solicitar'> SOLICITAR SERVICIOS </button>
+        <p>¡Bienvenido al portal Servicios Domesticos!</p>
+        <p>En esta página podras solicitar u ofrecer todo tipo de servicios domesticos en tu comunidad.</p>
+
+        <p>¿Que deseas hacer?</p>
+        
+      </div>
+
+      <div className='center-block'>
+
+        <div>
+          <Button text="Ofrecer Servicios" to="/ofrecer" type="primary" />
+        </div>
+
+        <div>
+          <Button text="Buscar Servicios" to="/solicitar" type="primary" />
+        </div>
+
+      </div>
     </>
+
+
+
   )
 }
 

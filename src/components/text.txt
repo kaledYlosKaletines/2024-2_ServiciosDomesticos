@@ -1,0 +1,23 @@
+<!--
+      <div className='layout'>
+        <h1 className='layout__title'>Servicios domesticos</h1>
+        <NavBar />
+        <div className='layout__page'>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/lightbulb' element={<LightbulbPage />} />
+            <Route path='/solicitar' element={<SolicitarPage />} />
+            <Route path='/ofrecer' element={<OfrecerPage />} />
+          </Routes>
+        </div>
+      </div>
+      -->
+
+
+<ul className="barra_horizontal-menu">
+        {/* Elementos del menú */}
+        <li>Inicio</li>
+        <li>Perfil</li>
+        <li>Configuraciones</li>
+        <li>Salir</li>
+      </ul>
