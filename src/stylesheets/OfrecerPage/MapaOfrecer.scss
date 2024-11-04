@@ -1,0 +1,19 @@
+.pagina-ayuda {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente al centro */
+    padding: 20px; /* Opcional: Añade espacio alrededor del contenedor */
+  }
+  
+  .contenido-izquierda {
+    flex: 1; /* Hace que la sección izquierda ocupe el espacio disponible */
+  }
+  
+  .contenido-derecha {
+    flex: 0 0 auto; /* La imagen ocupará solo el espacio necesario */
+  }
+  
+  .imagen-derecha {
+    width: 1000px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción */
+  }
