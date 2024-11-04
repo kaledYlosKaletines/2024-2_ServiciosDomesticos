@@ -56,7 +56,7 @@ export const OfrecerPage = () => {
         </div>
 
         <div className='right'>
-          <Button text="Siguiente" to="/solicitar" type="primary" />
+          <Button text="Siguiente" to="/mapa" type="primary" />
         </div>
 
 
