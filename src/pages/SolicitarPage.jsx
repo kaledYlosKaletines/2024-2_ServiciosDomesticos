@@ -1,6 +1,7 @@
 import React from 'react'
 import '../stylesheets/SolicitarPage/SolicitarPage.scss'
 import Button from '../components/button'
+import { Link } from 'react-router-dom'
 
 export const SolicitarPage = () => {
 
@@ -35,7 +36,18 @@ export const SolicitarPage = () => {
                 </div>
 
                 <div className="service-list">
-                    {[1, 2, 3].map((_, index) => (
+                   
+                    <div className="service-item">
+                        <div className="service-image">IMAGEN</div>
+                        <div className="service-description">
+                            <h3>
+                            <Link to='/solicitar/solicitud'>Kaled Hernandez </Link> </h3> {/*   remplazar el "to" por link de pagina nueva*/ }
+                            <p>Se ofrece servicio de arreglos y limpieza del hogar, también trabajo basico de jardineria, 5000$ /hora.</p>
+                        </div>
+                    </div>
+                    
+                    {/* Otros servicios */}
+                    {[2, 3].map((_, index) => (
                         <div key={index} className="service-item">
                             <div className="service-image">IMAGEN</div>
                             <div className="service-description">Descripción...</div>
@@ -43,22 +55,12 @@ export const SolicitarPage = () => {
                     ))}
                 </div>
 
-                
-
-
-
             </div>
             
             <Button text="Atrás" to="/" type="primary" />
 
    </>
-
-
     ) 
-
-    
-
-
 }
 
 export default SolicitarPage
