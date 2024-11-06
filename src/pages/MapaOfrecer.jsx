@@ -19,33 +19,16 @@ export const MapaOfrecer = () => {
 
 
         <div className='left'>
-  <Button text="Atrás" to="/" type="primary" />
-</div>
+        <Button text="Atrás" to="/" type="primary" />
+        </div>
 
-<div className='right'>
-  <Button text="Siguiente" to="/mapa" type="primary" />
-</div>
+        <div className='right'>
+          <Button text="Siguiente" to="/mapa" type="primary" />
+        </div>
 
-
-
-</div>
-        
+        </div>
         </>
-        
-
-      
-          
-          
-            
-            
-          
-          )
-        
-  
-
-  
-
-
+        )
 }
 
 export default MapaOfrecer
