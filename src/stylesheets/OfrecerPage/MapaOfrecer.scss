@@ -1,20 +1,241 @@
-.pagina-ayuda {
-    display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Alinea verticalmente al centro */
-    padding: 20px; /* Opcional: Añade espacio alrededor del contenedor */
-  }
-  
-  .contenido-izquierda {
-    flex: 1; /* Hace que la sección izquierda ocupe el espacio disponible */
-  }
-  
-  .contenido-derecha {
-    flex: 0 0 auto; /* La imagen ocupará solo el espacio necesario */
-  }
-  
-  .imagen-derecha {
-    width: 1000px; /* Ajusta el tamaño según tus necesidades */
-    height: auto; /* Mantiene la proporción */
+/* Contenedor principal */
+.map-container {
+  padding: 20px;
+}
+
+/* Panel de instrucciones */
+.instructions-panel {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.instructions-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.instructions-text {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.instructions-box {
+  background-color: #f0f9ff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.instructions-subtitle {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.instructions-list {
+  padding-left: 20px;
+}
+
+/* Buscador */
+.search-form {
+  margin-bottom: 16px;
+}
+
+.search-container {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.search-button {
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Control de radio */
+.radius-control {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.radius-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.radius-input {
+  width: 100%;
+}
+
+/* Contenedor del mapa */
+.map-wrapper {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Mensajes de estado */
+.status-message {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.success-message {
+  color: #22c55e;
+}
+
+.pending-message {
+  color: #666;
+}
+
+/* Estilos para los botones de navegación */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.nav-button {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.back-button {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.next-button {
+  background-color: #25D366;
+  color: white;
+}
+
+.next-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.nav-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #25D366;
+}
+
+.modal-info {
+  margin-bottom: 15px;
+}
+
+.modal-info-label {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.modal-info-value {
+  color: #1f2937;
+}
+
+.modal-close {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: #1ea557;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 640px) {
+  .nav-buttons {
+    padding: 0 10px;
   }
 
+  .nav-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+}
