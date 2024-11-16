@@ -20,7 +20,7 @@ const Layout = () => {
           <Route path='/solicitar' element={<SolicitarPage />} />
           <Route path='/ofrecer' element={<OfrecerPage />} />
           <Route path='/mapa' element = {<Mapa />} />
-          <Route path='/solicitar/solicitud' element={<SolicitudPage />} />
+          <Route path='/solicitar/solicitud/1' element={<SolicitudPage />} />
         </Routes>
       </div>
     </BrowserRouter>

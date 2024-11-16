@@ -1,74 +1,228 @@
-.search-section {
-    display: flex;
-    margin: 20px;
+.solicitar-page {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    // Header de búsqueda
+    .search-header {
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .search-tools {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+
+            .search-input {
+                flex: 1;
+                padding: 0.8rem;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 1rem;
+            }
+
+            .service-select {
+                min-width: 200px;
+                padding: 0.8rem;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                background-color: white;
+            }
+
+            .search-button {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.8rem 1.5rem;
+                background-color: #25D366;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #1ea552;
+                }
+            }
+        }
+    }
+
+    // Contenido principal
+    .main-content {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+    }
+
+    // Sidebar de filtros
+    .filters-sidebar {
+        .filter-section {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+
+            h3 {
+                margin-bottom: 1rem;
+                color: #333;
+            }
+
+            .filter-options {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+
+                .filter-option {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    cursor: pointer;
+
+                    input[type="checkbox"] {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+
+            .price-range {
+                input[type="range"] {
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+
+                .price-labels {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    // Grid de servicios
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+
+        .service-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+
+            .card-image {
+                position: relative;
+                height: 200px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .price-tag {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    background-color: rgba(37, 211, 102, 0.9);
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 20px;
+                    font-weight: bold;
+                }
+            }
+
+            .card-content {
+                padding: 1.5rem;
+
+                h3 {
+                    margin-bottom: 0.5rem;
+                    color: #333;
+                }
+
+                .category-tag {
+                    display: inline-block;
+                    background-color: #f0f0f0;
+                    padding: 0.3rem 0.8rem;
+                    border-radius: 15px;
+                    font-size: 0.9rem;
+                    color: #666;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    color: #666;
+                    margin-bottom: 1rem;
+                    line-height: 1.5;
+                }
+
+                .card-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .rating {
+                        color: #ffc107;
+                        span {
+                            color: #666;
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                    .contact-button {
+                        padding: 0.5rem 1rem;
+                        background-color: #25D366;
+                        color: white;
+                        border: none;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: #1ea552;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.search-input {
-    
-    padding: 10px;
-    margin-right: 10px;
+// Responsive
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr !important;
+    }
+
+    .filters-sidebar {
+        display: none; // O implementar un drawer/modal para móviles
+    }
+
+    .search-tools {
+        flex-direction: column;
+    }
 }
 
-.service-select {
-    padding: 10px;
-    margin-right: 10px;
-}
-
-.search-button {
-    padding: 10px;
-}
-
-
-.content-section {
-    display: flex;
-    padding: 20px;
-}
-
-
-.sidebar {
-    width: 200px;
-    margin-right: 20px;
-}
-
-.categories p {
-    margin: 10px 0;
-}
-
-.featured-service {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.featured-image {
-    background-color: #eee;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-
-.service-list {
-    flex: 1;
-}
-
-.service-item {
-    display: flex;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-.service-image {
-    width: 100px;
-    height: 100px;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-
-.service-description {
-    flex: 1;
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    }
 }
